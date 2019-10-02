@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".searchFragment.SearchFragment"
+    >
+
+    <LinearLayout
+        android:id="@+id/fragment_search_linear"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D3D3D3">
+
+        <SearchView
+            android:layout_weight="8"
+            android:id="@+id/fragment_search_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:queryHint="输入歌曲名称">
+
+        </SearchView>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_player"
+            android:id="@+id/fragment_search_player_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/fragment_search_listview"
+        android:layout_below="@id/fragment_search_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/player_main"
+    tools:context=".playerActivity.PlayerActivity"
+    android:background="#696969">
+
+    <RelativeLayout
+        android:id="@+id/player_music_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/player_music_detail_songName"
+            android:text="歌曲名"
+            android:textSize="25dp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/player_music_detail_albumName"
+            android:text="专辑"
+            android:layout_below="@id/player_music_detail_songName"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/player_music_detail_artists"
+            android:text="歌手"
+            android:layout_below="@id/player_music_detail_songName"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/player_middle"
+        android:layout_below="@id/player_music_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:src="@drawable/blackdisk"
+            android:layout_marginTop="60dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/player_image_disc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Shapes.Disk
+            android:id="@+id/player_image_blackhole"
+            android:scaleType="centerCrop"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/blackhole"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="60dp"/>
+
+        <Shapes.Needle
+            android:id="@+id/player_image_needle"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="150dp"
+            android:paddingLeft="-20dp"
+            android:src="@drawable/needle" />
+
+        <SeekBar
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/player_image_disc"
+            android:id="@+id/player_seekBar"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="190dp"
+            android:layout_height="18dp" />
+
+        <TextView
+            android:id="@+id/player_text_currentPosition"
+            android:layout_below="@id/player_image_disc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/player_seekBar"
+            android:text="当前" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="总计"
+            android:layout_below="@id/player_image_disc"
+            android:layout_toRightOf="@id/player_seekBar"
+            android:id="@+id/player_text_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/player_other_functions"
+        android:layout_below="@id/player_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/player_image_list_add"
+            android:src="@drawable/ic_action_like_music"
+            android:layout_centerInParent="true"
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:paddingTop="4dp"
+            android:background="@drawable/btn_grey"
+            android:theme="@style/RippleWhite"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:background="#696969">
+
+        <ImageButton
+            android:layout_toLeftOf="@id/player_start_pause"
+            android:id="@+id/player_prev"
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_ripple"
+            android:src="@drawable/ic_action_prev"
+            android:theme="@style/RippleWhite" />
+
+        <ImageButton
+            android:layout_centerInParent="true"
+            android:id="@+id/player_start_pause"
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_ripple"
+            android:src="@drawable/ic_action_play"
+            android:theme="@style/RippleWhite" />
+
+        <ImageButton
+            android:id="@+id/player_next"
+            android:layout_toRightOf="@id/player_start_pause"
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_ripple"
+            android:src="@drawable/ic_action_next"
+            android:theme="@style/RippleWhite" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mineFragment"
+    tools:context=".mineFragment.MineFragment">
+
+    <RelativeLayout
+        android:id="@+id/mine_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D3D3D3">
+        <Button
+            android:id="@+id/mine_new_music_list"
+            android:background="#D3D3D3"
+            android:text="添加新歌单"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_player"
+            android:id="@+id/fragment_search_player_entry"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/mine_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+
+        <com.example.audioplayer.slideView.MusicListView
+            android:id="@+id/mine_music_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#F12345"
+            android:dividerHeight="5dp">
+
+        </com.example.audioplayer.slideView.MusicListView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
